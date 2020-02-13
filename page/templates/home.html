@@ -8,7 +8,7 @@
 <body>
     <h1>Home</h1>
     {% for post in posts %}
-        {{post.title}}<br>
+        <a href="{% url 'detail' post.id %}">{{post.title}}</a><br>
         {{post.author}}<br>
         {{post.pub_date}}<br>
         {{post.content}}<br>
