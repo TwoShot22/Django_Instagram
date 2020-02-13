@@ -1,3 +1,8 @@
+from django.conf import settings
 from django.db import models
 
-# Create your models here.
+class Post(models.Model):
+    title = models.CharField(max_length = 20)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField('date published')
+    content = models.TextField()
