@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'page/css/home.css' %}">
+    <script src="{% static 'page/js/hello.js' %}"></script>
     <title>Lionstagram</title>
 </head>
 <body>
@@ -16,5 +17,7 @@
         {{post.pub_date}}<br>
         {{post.content}}<br><br>
     {% endfor %}
+    <input type="button" value="글 작성">
+    <input type="button" value="안녕하세요" onclick="hello()">
 </body>
 </html>
