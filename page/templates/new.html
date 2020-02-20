@@ -6,7 +6,8 @@
     <title>글 작성</title>
 </head>
 <body>
-    <form>
+    <form action="{% url 'new' %}" method="POST">
+        {% csrf_token %}
         <h3>타이틀</h3>
         <input type="text" name="title">
         <h3>내용</h3>
